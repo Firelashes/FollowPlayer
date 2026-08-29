@@ -1,0 +1,31 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "Firelashes"
+name = "FollowPlayer"
+versionNumber = "0.1.0"
+description = "Auto-walk to follow another player."
+websiteUrl = "https://github.com/Firelashes/FollowPlayer"
+containsNsfwContent = false
+[package.dependencies]
+denikson-BepInExPack_Valheim = "5.4.2202"
+
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "./bin/Release/net462/FollowPlayer.dll"
+target = "FollowPlayer.dll"
+
+
+[publish]
+repository = "https://thunderstore.io"
+communities = [ "valheim", ]
+[publish.categories]
+valheim = []
+
+

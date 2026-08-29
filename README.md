@@ -58,6 +58,15 @@ dotnet build -c Release
 
 The built DLL lands in `bin/Release/net462/FollowPlayer.dll`.
 
+## Publishing
+
+Releases are also published to [Thunderstore](https://thunderstore.io/package/download/Firelashes/FollowPlayer/). After bumping the version in `FollowPlayer.csproj` and `thunderstore.toml`, build the DLL, then:
+
+```
+dotnet tool install -g tcli   # once
+tcli publish --token <your Thunderstore API token>
+```
+
 ## Known limitations
 
 Following is straight-line, so the follower can snag on trees, boulders, and steep terrain. A future version can path through Valheim's own navigation (`Pathfinding.instance.GetPath`) and steer toward waypoints instead of straight at the target.
